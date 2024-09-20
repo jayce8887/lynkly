@@ -9,11 +9,12 @@
             margin: 0;
             padding: 0;
             background-image: url('./lynkly.jpeg');
-            background-size: 100% 100%; /* 가로와 세로 모두 브라우저 크기에 맞게 늘림 */
+            background-size: 100% auto; /* 가로는 꽉 채우고, 세로는 비율에 맞게 */
             background-repeat: no-repeat;
             background-position: top center;
-            height: 100vh; /* 화면 전체 높이 */
-            overflow: hidden; /* 스크롤이 생기지 않도록 */
+            min-height: 100vh; /* 최소 높이를 설정 */
+            height: auto; /* 세로 높이를 자동으로 설정 */
+            overflow-y: auto; /* 세로 스크롤 허용 */
         }
         .timer {
             font-size: 2em;
@@ -37,27 +38,4 @@
         // Update the countdown every second
         var x = setInterval(function() {
             // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 "
-            + minutes + "분 " + seconds + "초 ";
-
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-</body>
-</html>
+            var now =
