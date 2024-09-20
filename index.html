@@ -44,7 +44,7 @@
             padding-top: 10px; /* 최상단에서 살짝 떨어뜨림 */
         }
         .timer {
-            font-size: 2vw; /* 글자 크기를 더 급격히 줄어들게 설정 */
+            font-size: 3rem; /* 고정된 글자 크기 설정 */
             font-weight: bold;
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
@@ -72,4 +72,13 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분
+            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
