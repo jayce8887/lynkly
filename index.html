@@ -9,19 +9,19 @@
             margin: 0;
             padding: 0;
             background-image: url('./lynkly.jpeg');
-            background-size: cover;
-            background-position: center;
+            background-size: contain; /* Adjust to maintain aspect ratio */
+            background-repeat: no-repeat;
+            background-position: top center;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .timer {
             font-size: 2em;
             color: white;
             position: absolute;
             top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -36,7 +36,6 @@
 
         // Update the countdown every second
         var x = setInterval(function() {
-
             // Get today's date and time
             var now = new Date().getTime();
 
@@ -62,4 +61,3 @@
     </script>
 </body>
 </html>
-
