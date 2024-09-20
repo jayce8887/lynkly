@@ -40,7 +40,7 @@
             padding-top: 10px; /* 최상단에서 살짝 떨어뜨림 */
         }
         .timer {
-            font-size: 3rem; /* 고정된 글자 크기 설정 */
+            font-size: 2.5rem; /* 글자 크기를 약간 줄임 */
             font-weight: bold;
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
@@ -53,7 +53,7 @@
 <body>
     <img src="./lynkly.jpeg" alt="Coming Soon Image" class="background-image">
     <div class="timer-container">
-        <div class="timer" id="countdown">00D 00H 00m 00s</div>
+        <div class="timer" id="countdown">00일 00시간 00분 00초</div>
     </div>
 
     <script>
@@ -68,7 +68,7 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
 
             if (distance < 0) {
                 clearInterval(x);
