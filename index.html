@@ -9,12 +9,11 @@
             margin: 0;
             padding: 0;
             background-image: url('./lynkly.jpeg');
-            background-size: 100% auto; /* 가로는 꽉 차고, 세로는 비율에 맞게 */
+            background-size: 100% 100%; /* 가로와 세로 모두 브라우저 크기에 맞게 늘림 */
             background-repeat: no-repeat;
             background-position: top center;
-            height: auto; /* 전체 높이는 내용에 맞게 설정 */
-            min-height: 100vh; /* 최소 높이 설정 */
-            overflow-y: auto; /* 세로 스크롤 허용 */
+            height: 100vh; /* 화면 전체 높이 */
+            overflow: hidden; /* 스크롤이 생기지 않도록 */
         }
         .timer {
             font-size: 2em;
