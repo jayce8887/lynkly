@@ -30,6 +30,10 @@
         .background-image {
             width: 100vw; /* 가로를 화면에 꽉 채우도록 설정 */
             height: auto; /* 높이는 이미지 비율에 따라 자동 설정 */
+            position: fixed; /* 이미지를 최상단에 고정 */
+            top: 0; /* 상단에 위치 */
+            left: 0; /* 왼쪽에 위치 */
+            z-index: -1; /* 타이머보다 뒤에 배치 */
         }
         .timer-container {
             position: absolute;
@@ -68,13 +72,4 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-</body>
-</html>
+            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분
