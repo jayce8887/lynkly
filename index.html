@@ -39,13 +39,12 @@
             width: 100%; /* 중앙 정렬을 위한 전체 너비 설정 */
             padding-top: 10px; /* 최상단에서 살짝 떨어뜨림 */
         }
-         .timer-container2 {
+        .timer-container2 {
             position: absolute;
-            top: 0; /* 타이머를 최상단으로 배치 */
+            top: 60px; /* 첫 번째 타이머 아래로 약간 떨어뜨림 */
             color: white;
             text-align: center;
             width: 100%; /* 중앙 정렬을 위한 전체 너비 설정 */
-            padding-top: 30px; /* 최상단에서 살짝 떨어뜨림 */
         }
         .timer {
             font-size: 1.5rem; /* 글자 크기를 약간 줄임 */
@@ -63,7 +62,7 @@
     <div class="timer-container">
         <div class="timer" id="countdown">00일 00시간 00분 00초</div>
     </div>
-    <div class="timer-container">
+    <div class="timer-container2">
         <div class="timer" id="countdown2">00일 00시간 00분 00초</div>
     </div>
     <script>
