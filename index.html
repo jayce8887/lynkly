@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+        }
         body {
-            background-image: ./lynkly.jpeg'); /* 이미지 경로 설정 */
+            background-image: url('./lynkly.jpeg'); /* 이미지 경로 설정 */
             margin: 0;
             padding: 0;
             height: auto; /* 세로 높이를 자동으로 설정 */
@@ -17,11 +25,6 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-        }
-
-        img {
-            width: 100vw; /* 가로를 브라우저에 꽉 차게 설정 */
-            height: auto; /* 세로 비율을 유지하여 늘어남 */
         }
         .timer-container {
             position: absolute;
