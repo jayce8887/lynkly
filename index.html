@@ -54,6 +54,7 @@
     <img src="./lynkly.jpeg" alt="Coming Soon Image" class="background-image">
     <div class="timer-container">
         <div class="timer" id="countdown">00일 00시간 00분 00초</div>
+        <div class="timer" id="countdown2">00일 00시간 00분 00초</div>
     </div>
 
     <script>
@@ -68,7 +69,8 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
+            document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown2").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
 
             if (distance < 0) {
                 clearInterval(x);
