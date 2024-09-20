@@ -68,7 +68,7 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
+            document.getElementById("countdown").innerHTML = days + "D " + hours + "H " + minutes + "m " + seconds + "s ";
 
             if (distance < 0) {
                 clearInterval(x);
