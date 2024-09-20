@@ -36,4 +36,33 @@
 <body>
     <img src="./lynkly.jpeg" alt="Coming Soon Image">
     <div class="timer" id="countdown">
-        00일 00시간 00분
+        00일 00시간 00분 00초
+    </div>
+
+    <script>
+        // 타이머가 흐르도록 설정
+        var countDownDate = new Date("Oct 30, 2024 00:00:00").getTime();
+
+        // 타이머를 1초마다 업데이트
+        var x = setInterval(function() {
+            var now = new Date().getTime(); // 현재 시간 가져오기
+            var distance = countDownDate - now; // 목표 시간까지 남은 시간 계산
+
+            // 남은 시간 계산: 일, 시간, 분, 초
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 타이머 업데이트
+            document.getElementById("countdown").innerHTML = days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
+
+            // 타이머가 종료되면 멈추고 "EXPIRED" 표시
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
