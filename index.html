@@ -15,6 +15,9 @@
         }
         body {
             background-image: url('./lynkly.jpeg'); /* 이미지 경로 설정 */
+            background-size: contain; /* 이미지가 화면에 맞도록 조정 */
+            background-repeat: no-repeat; /* 이미지 반복 제거 */
+            background-position: center; /* 이미지 중앙 정렬 */
             margin: 0;
             padding: 0;
             height: auto; /* 세로 높이를 자동으로 설정 */
@@ -25,16 +28,6 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            font-family: Arial, sans-serif;
-        }
-
-        body2 {
-            background-image: url('홈페이지(1920-2880).jpg'); /* 이미지 경로 설정 */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-family: Arial, sans-serif;
         }
         .timer-container {
@@ -59,7 +52,7 @@
 </head>
 <body>
     <div class="timer-container">
-        <div class="timer" id="countdown">00 days 00 hours 00 minutes 00 seconds</div>
+        <div class="timer" id="countdown">00일 00시간 00분 00초</div>
     </div>
 
     <script>
